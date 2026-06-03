@@ -1,0 +1,46 @@
+package com.Bank.bank_app.dto;
+
+public class Account_dto {
+
+    private Long id;
+    private String account_name;
+    private String account_type;
+    private double balance;
+    private String account_holder_name;
+    private String username;
+    private String password;
+
+    // ✅ VERY IMPORTANT (this is missing in your code)
+    public Account_dto() {}
+
+    // ✅ Parameterized constructor
+    public Account_dto(Long id, String account_name, String account_type,
+                       double balance, String account_holder_name,
+                       String username, String password) {
+        this.id = id;
+        this.account_name = account_name;
+        this.account_type = account_type;
+        this.balance = balance;
+        this.account_holder_name = account_holder_name;
+        this.username = username;
+        this.password = password;
+    }
+
+    // ✅ GETTERS
+    public Long getId() { return id; }
+    public String getAccount_name() { return account_name; }
+    public String getAccount_type() { return account_type; }
+    public double getBalance() { return balance; }
+    public String getAccount_holder_name() { return account_holder_name; }
+    public String getUsername() { return username; }
+    public String getPassword() { return password; }
+
+    // ✅ SETTERS
+    public void setId(Long id) { this.id = id; }
+    public void setAccount_name(String account_name) { this.account_name = account_name; }
+    public void setAccount_type(String account_type) { this.account_type = account_type; }
+    public void setBalance(double balance) { this.balance = balance; }
+    public void setAccount_holder_name(String account_holder_name) { this.account_holder_name = account_holder_name; }
+    public void setUsername(String username) { this.username = username; }
+    public void setPassword(String password) { this.password = password; }
+}
