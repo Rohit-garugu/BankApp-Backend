@@ -13,7 +13,9 @@ public class AccountMapper {
                 dto.getBalance(),
                 dto.getAccount_holder_name(),
                 dto.getUsername(),
-                dto.getPassword()
+                dto.getPassword(),
+                dto.getAccountNumber(),
+                dto.getIfscCode()
         );
     }
 
@@ -25,7 +27,10 @@ public class AccountMapper {
                 acc.getBalance(),
                 acc.getAccount_holder_name(),
                 acc.getUsername(),
-                acc.getPassword()
+                null,  // ✅ DO NOT SEND PASSWORD
+                acc.getAccountNumber(),
+                acc.getIfscCode()
+
         );
     }
 }

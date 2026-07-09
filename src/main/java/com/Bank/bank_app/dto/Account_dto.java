@@ -10,13 +10,17 @@ public class Account_dto {
     private String username;
     private String password;
 
+    private String accountNumber;
+    private String ifscCode;
+
+
     // ✅ VERY IMPORTANT (this is missing in your code)
     public Account_dto() {}
 
     // ✅ Parameterized constructor
     public Account_dto(Long id, String account_name, String account_type,
                        double balance, String account_holder_name,
-                       String username, String password) {
+                       String username, String password, String accountNumber, String ifscCode) {
         this.id = id;
         this.account_name = account_name;
         this.account_type = account_type;
@@ -24,6 +28,10 @@ public class Account_dto {
         this.account_holder_name = account_holder_name;
         this.username = username;
         this.password = password;
+
+        this.accountNumber = accountNumber;
+        this.ifscCode = ifscCode;
+
     }
 
     // ✅ GETTERS
@@ -35,6 +43,9 @@ public class Account_dto {
     public String getUsername() { return username; }
     public String getPassword() { return password; }
 
+    public String getAccountNumber() { return accountNumber; }
+    public String getIfscCode() { return ifscCode; }
+
     // ✅ SETTERS
     public void setId(Long id) { this.id = id; }
     public void setAccount_name(String account_name) { this.account_name = account_name; }
@@ -43,4 +54,6 @@ public class Account_dto {
     public void setAccount_holder_name(String account_holder_name) { this.account_holder_name = account_holder_name; }
     public void setUsername(String username) { this.username = username; }
     public void setPassword(String password) { this.password = password; }
+    public void setAccountNumber(String accountNumber) { this.accountNumber = accountNumber; }
+    public void setIfscCode(String ifscCode) { this.ifscCode = ifscCode; }
 }
