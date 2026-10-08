@@ -14,7 +14,7 @@
     <artifactId>bank_app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>bank_app</name>
-    <description>Production-ready backend for Bank App</description>
+    <description>Production-ready backend for Bank App with Real-time Payments & UPI</description>
 
     <properties>
         <java.version>21</java.version>
@@ -54,6 +54,7 @@
             <optional>true</optional>
         </dependency>
 
+        <!-- JWT -->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-api</artifactId>
@@ -74,6 +75,27 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!-- Twilio for SMS/OTP -->
+        <dependency>
+            <groupId>com.twilio.sdk</groupId>
+            <artifactId>twilio</artifactId>
+            <version>9.2.0</version>
+        </dependency>
+
+        <!-- Redis for OTP caching (optional but recommended) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <!-- Apache Commons for utilities -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
+        </dependency>
+
+        <!-- Testing -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
